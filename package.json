@@ -1,0 +1,18 @@
+{
+  "name": "jasonchat-discordlike",
+  "version": "1.0.0",
+  "description": "Clone Discord amélioré basé sur Electron et Node.js",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "electron": "^29.0.0",
+    "express": "^4.18.0",
+    "multer": "^1.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  }
+}
