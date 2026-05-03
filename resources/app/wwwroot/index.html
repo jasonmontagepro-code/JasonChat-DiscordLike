@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>JasonChat Discord Like</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="chat-shell">
+    <nav class="server-rail">
+      <div class="server-badge home" onclick="switchToHome()">JC</div>
+      <div id="server-list"></div>
+      <button class="rail-button" onclick="openCreateServerModal()" title="Créer un serveur">
+        <i data-lucide="plus"></i>
+      </button>
+    </nav>
+    <aside class="channel-sidebar">
+      <div class="sidebar-header">
+        <h2 id="server-name"></h2>
+        <button onclick="openServerSettings()"><i data-lucide="settings"></i></button>
+      </div>
+      <section id="channels-list"></section>
+      <section class="roles-section" id="roles-list"></section>
+    </aside>
+    <section class="chat-panel">
+      <header class="chat-topbar">
+        <div class="channel-heading">
+          <i id="channel-icon"></i>
+          <h1 id="channel-title"></h1>
+        </div>
+        <div class="user-status">
+          <select id="user-status" onchange="changeStatus(this.value)">
+            <option value="online">🟢 En ligne</option>
+            <option value="idle">🟡 Absent</option>
+            <option value="dnd">🔴 Ne pas déranger</option>
+            <option value="invisible">⚫ Hors-ligne</option>
+          </select>
+        </div>
+      </header>
+      <div id="thread-section"></div>
+      <main id="messageList" class="message-list"></main>
+      <footer class="composer">
+        <div id="attachmentPreview" class="attachment-preview"></div>
+        <form id="composerForm">
+          <label class="file-attach"><i data-lucide="plus-circle"></i>
+            <input type="file" id="fileInput" multiple accept="*/*">
+          </label>
+          <textarea id="messageInput" placeholder="Envoyer un message ou /commande…"></textarea>
+          <button type="submit">Envoyer</button>
+          <button type="button" onclick="startCall('voice')" title="Appel"><i data-lucide="phone"></i></button>
+          <button type="button" onclick="startCall('video')" title="Vidéo"><i data-lucide="video"></i></button>
+          <button type="button" onclick="startCall('screen')" title="Partager écran"><i data-lucide="monitor"></i></button>
+        </form>
+      </footer>
+    </section>
+    <aside class="members-panel" id="membersPanel"></aside>
+    <div id="modals"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
