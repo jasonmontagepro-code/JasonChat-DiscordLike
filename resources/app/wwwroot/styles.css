@@ -1,0 +1,44 @@
+html,body { background: #36393f; color:#dae0e6; margin:0; padding:0; height:100%; font-family: 'Segoe UI',sans-serif;}
+.chat-shell { display:flex; width:100vw; height:100vh;}
+/* ---- SERVERS ---- */
+.server-rail{width:72px; background:#232428; color:#fff; display:flex; flex-direction:column; align-items:center; gap:12px; padding:10px 0;}
+.server-badge,.server-icon,.rail-button{width:48px; height:48px; border-radius:24px; background:#36393f; display:flex;align-items:center; justify-content:center; font-size:22px; margin-bottom:9px; cursor:pointer;}
+.server-badge.home{background:#5865f2; color:#fff;}
+.rail-button{margin-top:auto;background:#232428;}
+.server-icon:hover, .server-badge:hover, .rail-button:hover{background:#7289da;}
+/* ---- CHANNEL BAR ---- */
+.channel-sidebar{width:244px; background:#2f3136; display:flex; flex-direction:column;}
+.sidebar-header { display: flex; align-items:center; padding:14px 16px;}
+.sidebar-header h2{flex:1;font-size:1.15em;letter-spacing:.02em;}
+#channels-list, .roles-section{padding:10px;}
+.channel-item{padding:8px 16px; border-radius:6px; cursor:pointer; display:flex;align-items:center;gap:8px;}
+.channel-item:hover{background:#353943;}
+.role-item{font-size:.94em; margin:3px 0;}
+/* ---- MAIN PANEL ---- */
+.chat-panel{flex:1;display:flex;flex-direction:column;}
+.chat-topbar{height:54px;background:#232428;display:flex;align-items:center; justify-content:space-between; padding:0 24px;}
+.channel-heading{display:flex;align-items:center;gap:16px;}
+.channel-heading h1{margin:0;}
+.user-status select{background:#232428;color:#fff;border:none;}
+/* ---- MEMBERS RIGHT ---- */
+.members-panel{width:230px;background:#2f3136;color:#adbac7;display:none;} /* activer pour role/membres */
+.message-list{flex:1;overflow-y:auto;padding:18px;}
+.message{display:flex;align-items:flex-start;gap:10px;padding:8px;}
+.avatar{width:38px;height:38px;border-radius:50%;background:#7289da;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.05em;}
+.body{flex:1;}
+.text{display:block;margin:5px 0;font-size:1.07em;}
+.meta{font-size:.8em;color:#999;margin-left:4px;}
+.reactions button{border:none;background:transparent;font-size:1.12em;cursor:pointer;}
+.mention{color:#faa;font-weight:bold;}
+.attachment-preview,.file-attachment{margin:6px 0;}
+.file-attachment{display:flex;align-items:center;gap:4px;color:#87cefa;}
+/* ---- COMPOSER ---- */
+.composer{background:#40444b;padding:14px;}
+.composer form{display:flex;align-items:center;gap:11px;}
+.composer textarea{width:75%; min-height:38px;resize:vertical;background:#2f3136;color:#fff;border:none;border-radius:5px;padding:8px;}
+.composer button{background:#5865f2;color:#fff;border:none;padding:7px 14px;border-radius:5px;cursor:pointer;}
+.composer .file-attach input[type="file"]{display:none;}
+/* ---- THREADS ---- */
+#thread-section{background:#353943;padding:12px;}
+/* ---- MODAL (placeholder, adapter au besoin) ---- */
+#modals{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:222;}
